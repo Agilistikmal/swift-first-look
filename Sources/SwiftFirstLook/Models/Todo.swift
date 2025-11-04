@@ -13,6 +13,9 @@ final class Todo: Model, @unchecked Sendable {
     @Field(key: "title")
     var title: String
 
+    @Children(for: \.$todo)
+    var items: [TodoItem]
+
     init() { }
 
     init(id: UUID? = nil, title: String) {

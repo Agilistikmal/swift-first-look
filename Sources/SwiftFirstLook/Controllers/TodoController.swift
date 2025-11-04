@@ -14,11 +14,17 @@ struct TodoController: RouteCollection {
 
     @Sendable
     func index(req: Request) async throws -> [TodoDTO] {
-        let todos = try await Todo.query(on: req.db).all()
+        let todos = try await Todo.query(on: req.db).with(\.$items).all()
         if todos.isEmpty {
             return []
         }
-        return todos.map { $0.toDTO() }
+        return todos.map { todo in
+            TodoDTO(
+                id: todo.id,
+                title: todo.title,
+                items: todo.items.map { $0.toDTO() }
+            )
+        }
     }
 
     @Sendable
