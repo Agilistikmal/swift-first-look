@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:swift-first-look}",
+            "name": "Debug SwiftFirstLook",
+            "program": "${workspaceFolder:swift-first-look}/.build/debug/SwiftFirstLook",
+            "preLaunchTask": "swift: Build Debug SwiftFirstLook"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:swift-first-look}",
+            "name": "Release SwiftFirstLook",
+            "program": "${workspaceFolder:swift-first-look}/.build/release/SwiftFirstLook",
+            "preLaunchTask": "swift: Build Release SwiftFirstLook"
+        }
+    ]
+}
