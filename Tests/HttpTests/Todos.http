@@ -1,0 +1,14 @@
+GET http://localhost:8080/todos
+
+###
+
+POST http://localhost:8080/todos
+Content-Type: application/json
+
+{
+    "title": "Buy groceries"
+}
+
+###
+
+DELETE http://localhost:8080/todos/2BF3FF6B-171C-43D6-86D1-693C897B28D7

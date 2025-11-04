@@ -16,7 +16,7 @@ struct TodoController: RouteCollection {
     func index(req: Request) async throws -> [TodoDTO] {
         let todos = try await Todo.query(on: req.db).all()
         if todos.isEmpty {
-            return [TodoDTO(id: nil, title: "No todos found")]
+            return []
         }
         return todos.map { $0.toDTO() }
     }
