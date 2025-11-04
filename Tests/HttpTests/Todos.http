@@ -12,3 +12,29 @@ Content-Type: application/json
 ###
 
 DELETE http://localhost:8080/todos/2BF3FF6B-171C-43D6-86D1-693C897B28D7
+
+###
+
+GET http://localhost:8080/todos/2C095955-19EE-4811-8DCA-0B39A8D80CC2/items
+
+###
+
+POST http://localhost:8080/todos/2C095955-19EE-4811-8DCA-0B39A8D80CC2/items
+Content-Type: application/json
+
+[
+    {
+        "name": "Yogurt",
+        "description": "2x Kin Yogurt"
+    },
+    {
+        "name": "Snacks",
+        "description": "Japota Butter & Jeruk Nipis"
+    },
+    {
+        "name": "Wafer",
+        "description": "Vanilla Tango Wafer"
+    }
+]
+
+###
